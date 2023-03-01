@@ -2,8 +2,14 @@
 /*Bu görevleri yaparken çıktıların doğru çalıştığını kontrol etmeniz için console.log'u sıklıkla kullanmanızı tavsiye ediyoruz.*/
 
 ///////////////Menu Elemanları ///////////////////
-const cay = {isim: "Çay", fiyat: 4, kategori: "İçecekler"};
-const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı"};
+const cay = {
+	isim: "Çay", 
+	fiyat: 4, 
+	kategori: "İçecekler"};
+const serpmeKahvalti = {
+	isim: "Serpme Kahvaltı", 
+	fiyat: 16, 
+	kategori:"Kahvaltı"};
 
 /* Görev 1a: Nesneler döndüren bir fonksiyon yazın
 	Aşağıdaki MenuElemaniOlustur fonksiyonunu, yukarıda gördüğünüz cay ve serpmeKahvalti (isim, fiyat, kategori) nesnelerini oluşturacak şekilde yazın. 
@@ -15,10 +21,13 @@ const serpmeKahvalti = {isim: "Serpme Kahvaltı", fiyat: 16, kategori:"Kahvaltı
 */
 
 
-function MenuElemaniOlustur(/*Kodlar buraya*/){
-	/*Kodlar buraya*/
-}
+function MenuElemaniOlustur(isim, fiyat, kategori) {
 
+const yeniMenuElemmani = {isim, fiyat, kategori};
+return yeniMenuElemmani;
+
+}
+console.log(MenuElemaniOlustur('Çay', 4, 'İçecekler'))
 
 
 /*  Görev 1b (otomatik test yok): 
@@ -30,6 +39,14 @@ function MenuElemaniOlustur(/*Kodlar buraya*/){
 	
 	Örnek: MenuElemaniOlustur("Karışık Pizza",5,"Pizzalar") şunu döndürür: {isim:"Karışık Pizza",fiyat:5,kategori:"Pizzalar"}
 */
+
+function menuElemaniOlustur(isim, fiyat, kategori) {
+
+	const yeniMenuElemmani = {isim, fiyat, kategori};
+	return yeniMenuElemmani;
+	
+	}
+	console.log(menuElemaniOlustur("Sucuklu Pizza",5,"Pizzalar"))
 
 
 
@@ -45,13 +62,21 @@ function MenuElemaniOlustur(/*Kodlar buraya*/){
 	Örnek: burger.indirim("öğretmen") 13.5 döndürmeli ve burger.indirim("diğer") 16.2 döndürmeli
 */
 
-
 const burger = {
 	isim: "Burger", 
 	fiyat: 18, 
 	kategori: "Öğle Yemeği", 
-
+  indirim: function(indirimUygulanacakMusteriTipi) 
+    {
+    if (indirimUygulanacakMusteriTipi === "öğretmen" || indirimUygulanacakMusteriTipi === "öğrenci") {return this.fiyat * 0.75
+    } else if (indirimUygulanacakMusteriTipi === "diğer") {return this.fiyat * 0.9
+    }
 }
+ }   
+
+  console.log(burger.indirim("diğer"))
+
+
 
 
 
@@ -71,6 +96,8 @@ const degerlendirmeler = [
 	Yukarıdaki degerlendirmeler dizisini(array) kullanarak:
 	1. Sadece Ahmet'in geribildirimini konsolda görüntüleyin - fonksiyona gerek yok
 */
+
+
 
 
 
