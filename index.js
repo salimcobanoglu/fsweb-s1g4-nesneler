@@ -40,13 +40,9 @@ console.log(MenuElemaniOlustur('Çay', 4, 'İçecekler'))
 	Örnek: MenuElemaniOlustur("Karışık Pizza",5,"Pizzalar") şunu döndürür: {isim:"Karışık Pizza",fiyat:5,kategori:"Pizzalar"}
 */
 
-function menuElemaniOlustur(isim, fiyat, kategori) {
+const kahve = MenuElemaniOlustur("kahve",5,"kahvaltı");
 
-	const yeniMenuElemmani = {isim, fiyat, kategori};
-	return yeniMenuElemmani;
-	
-	}
-	console.log(menuElemaniOlustur("Sucuklu Pizza",5,"Pizzalar"))
+console.log(kahve);
 
 
 
@@ -121,11 +117,13 @@ const degerlendirmeler = [
 */
 
 
-function DegerledirmeEkle(/*Kodlar buraya */){
-	/*Kodlar buraya */
-	
-}
+function DegerledirmeEkle(degerlendirmelerP,isim, puan, geribildirim){
 
+const yeniDegerlendirme = {isim, puan, geribildirim};
+const yeniListe = degerlendirmelerP.push(yeniDegerlendirme)
+return degerlendirmelerP;
+}
+console.log(DegerledirmeEkle(degerlendirmeler,'Hurşut', 2, 'Boktan yemekler!'))
 
 
 /*  Görev 6: 
@@ -139,11 +137,12 @@ function DegerledirmeEkle(/*Kodlar buraya */){
 */
 
 
-function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
-
+function AnahtardanDegerlendirmeAl(degerlendirmelerP,isimP) {
+const degerlendirme= degerlendirmeler[isimP];
+return `${degerlendirme.isim} isimli kişi ${degerlendirme.puan} puan verdi ve şunları yazdı: ${degerlendirme.geribildirim}`
+ 
 }
-
+console.log(AnahtardanDegerlendirmeAl(degerlendirmeler,0))
 
 
 /*  Görev 7:  
